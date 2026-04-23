@@ -11,7 +11,7 @@
 // Incluimos la librería creada
 #include "PWM2.h"
 
-// Declaramos la funcion que inicializa el Timer 2 en PWM
+// Declaramos la funcion que inicializa el Timer 2 en Fast PWM
 void PWM2_init(void) {
 	
 	// Configuramos los pines D3 y D11 como salidas

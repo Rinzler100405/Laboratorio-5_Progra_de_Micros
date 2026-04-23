@@ -8,10 +8,10 @@
 // Incluimos definiciones propias del Atmega328p
 #include <avr/io.h>
 
-// Incluimos la librería creada
+// Incluimos la librería creada de las funciones prototipo
 #include "PWM1.h"
 
-// Declaramos la funcion que inicializa el Timer 1 en PWM
+// Declaramos la función que inicializa el Timer 1 en PWM
 void PWM1_init(void) {
 	
 	// Configuramos los pines D9 y D10 como salidas
@@ -21,7 +21,7 @@ void PWM1_init(void) {
 	TCCR1A = (1 << COM1A1) | (1 << COM1B1) | (1 << WGM11);
 	TCCR1B = (1 << WGM13) | (1 << WGM12) | (1 << CS11);
 
-	// Definimos el periodo del PWM para obtener una frecuencia de 50 Hz
+	// Definimos el periódo del PWM para obtener una frecuencia de 50 Hz
 	ICR1 = 39999;
 
 	// Inicializa los Servos en posición central
